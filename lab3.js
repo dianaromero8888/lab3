@@ -1,64 +1,41 @@
-/* Array en JavaScript */
 
-//'use strict';
+/* objetos y funciones */
 
-var my_array = new Array();
+var my_object = new Object();
 
-var other_array = [];
-
-my_array = [1,3,3,3,4,4,555,55,666,6,6,666666];
-
-console.log(my_array);
-
-console.log(my_array[3]);
-
-other_array = ['a', 'n', 'ggjggjjggjgj', 'fjfjfjf'];
-
-console.log(other_array);
-
-/* metodos sobre los arreglos */
-
-// Agregando elemento despues de la ultima posicion
-
-my_array.push(39);
-
-other_array.push('hola mundo');
-
-console.log(other_array);
-
-console.log(my_array);
-
-// Eliminar el ultimo elelmento
-
-my_array.pop();
-
-other_array.pop();
-
-// eliminar el primer elemento
-
-my_array.shift();
-
-other_array.shift();
-
-console.log(other_array);
-
-console.log(my_array);
+var other_object = {};
 
 
-// Organizar elementos+
-my_array.sort();
+my_object = {
+	firstName: 'Alejandro',
+	lastName: 'Romero',
+	phone: 1137373
+};
 
-other_array.sort();
 
-console.log(other_array);
+console.log(my_object.firstName);
 
-console.log(my_array);
+console.log(my_object['lastName']);
 
-tasks = ['comer', 'dormir', 'jugar'];
+var key;
 
-console.log(tasks);
+for(key in my_object){
+	console.log(my_object[key]);
+}
 
-tasks.splice(1,3, "Estudiar", "saltar", "correr");
 
-console.log(tasks);
+// Funciones
 
+function test(){
+	console.log('ejecutando una funcion');
+}
+
+test();
+
+// usando funcion anonima
+
+var bye_bye = function(){
+	console.log('Que tengan una feliz semana santa');
+}
+
+bye_bye();
